@@ -78,7 +78,37 @@ if (isset($_GET['age'])) {
 }
 
 echo"<p>4. Display a different greeting according to the user's age and gender.</p>";
+echo '<form method="get" action="">
+    <label for="age">Enter your age:</label>
+    <input type="number" name="age" id="age"><br>
+    <label for="gender">Select your gender:</label>
+    <input type="radio" name="gender" value="male" id="male"><label for="male">Male</label>
+    <input type="radio" name="gender" value="female" id="female"><label for="female">Female</label><br>
+    <input type="submit" name="submit" value="Greet me now">
+</form>';
 
+if (isset($_GET['age']) && isset($_GET['gender'])) {
+    $age = $_GET['age'];
+    $gender = $_GET['gender'];
+    if ($age < 12) {
+        $message = "Hello kiddo!";
+    } elseif ($age >= 12 && $age <= 18) {
+        if ($gender == "female") {
+            $message = "Hello Miss Teen!";
+        } else {
+            $message = "Hello mister Teen!";
+        }
+    } elseif ($age > 18 && $age <= 115) {
+        if ($gender == "female") {
+            $message = "Hello Madam!";
+        } else {
+            $message = "Hello Sir!";
+        }
+    } else {
+        $message = "Wow! Still alive? Are you a fucking elf?";
+    }
+    echo $message;
+}
 ?>  
 </body>
 </html>
