@@ -52,6 +52,33 @@ if ($now >= "05:00" && $now <= "09:00") {
 } else {
     echo "<br>Good night!";
 }
+
+echo"<p>3. Display a different greeting according to the user's age.</p>";
+
+echo 
+'<form method="get" action="">
+    <label for="age">Enter your age:</label>
+    <input type="number" name="age" id="age">
+    <input type="submit" name="submit" value="Greet me now">
+</form>
+';
+
+
+if (isset($_GET['age'])) {
+    $age = $_GET['age'];
+    if ($age < 12) {
+        $message = "Hello kiddo!";
+    } elseif ($age >= 12 && $age <= 18) {
+        $message = "Hello Teenager!";
+    } elseif ($age > 18 && $age <= 115) {
+        $message = "Hello Adult!";
+    } else {
+        $message = "Wow! Still alive? Are you a robot, like me? Can I hug you?";
+    }
+    echo $message;
+}
+
+
 ?>  
 </body>
 </html>
