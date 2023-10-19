@@ -63,7 +63,6 @@ echo
 </form>
 ';
 
-
 if (isset($_GET['age'])) {
     $age = $_GET['age'];
     if ($age < 12) {
@@ -77,7 +76,6 @@ if (isset($_GET['age'])) {
     }
     echo $message;
 }
-
 
 ?>  
 </body>
