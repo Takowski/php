@@ -77,6 +77,8 @@ if (isset($_GET['age'])) {
     echo $message;
 }
 
+echo"<p>4. Display a different greeting according to the user's age and gender.</p>";
+
 ?>  
 </body>
 </html>
