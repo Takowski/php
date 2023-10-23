@@ -35,9 +35,20 @@
     for ($number = 1; $number <= 120; $number++) {
         echo $number . '<br>';
     }
-
-
     ?>
+    <form>
+        <label for="country">Select a country:</label>
+        <select id="country" name="country">
+            <?php
+            $countries = array('Belgium', 'France', 'Italy', 'Spain', 'Germany', 'Netherlands', 'Switzerland', 'Luxembourg');
+            foreach ($countries as $country) {
+                echo '<option value="' . $country . '">' . $country . '</option>';
+            }
+            ?>
+        </select>
+        <input type="submit" value="Submit">
+    </form>
+
 </body>
 
 </html>
