@@ -9,7 +9,7 @@
 
 <body>
     <?php
-    echo "<p>11. Ternary exercice - unicorn variant</p>";
+    echo "<p>10.2. Ternary exercice - unicorn variant</p>";
     echo '<form method="get" action="">
     <input type="radio" name="gender" value="H" id="human"><label for="human">Human</label>
     <input type="radio" name="gender" value="C" id="cat"><label for="cat">Cat</label><br>
