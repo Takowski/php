@@ -32,6 +32,15 @@ $me= array (
  print_r($me);
  echo'</pre>';
 
+$countme = count($me["hobbies"]);
+echo "i have " . $countme . " hobbies.</br>";
+$countmother = count($mother["hobbies"]);
+echo "my mother has " . $countmother . " hobbies.</br>";
+$total = $countme + $countmother;
+echo "we have " . $total . " hobbies together.";
+
+
+
 
 
 ?>   
