@@ -7,13 +7,33 @@
 </head>
 <body>
  <?php
+    $mother= array (
+        "firstname" => "Martine",
+        "lastname" => "Delforge",
+        "age" => 65,
+        "country" => "Belgium",
+        "city" => "Mons",
+        "favorite movies" => array("The Lord of the Rings", "The Hobbit", "Star Wars", "The Matrix"),
+        "hobbies" => array("nothing", "nothing more", "Nothing else"),
+    );
 $me= array (
-    "name" => "Stephane",
+    "firstname" => "Stephane",
+    "lastname" => "Delforge",
     "age" => 41,
     "country" => "Belgium",
     "city" => "Mons",
+    "favorite movies" => array("The Lord of the Rings", "The Hobbit", "Star Wars", "The Matrix"),
     "hobbies" => array("nothing", "nothing more", "Nothing else"),
+    "mother"=>$mother ,
 );
+
+
+ echo'<pre>';
+ print_r($me);
+ echo'</pre>';
+
+
+
 ?>   
 </body>
 </html>
