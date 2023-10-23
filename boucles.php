@@ -39,11 +39,24 @@
     <form>
         <label for="country">Select a country:</label>
         <select id="country" name="country">
+            <option value="">Choose a country</option>
             <?php
-            $countries = array('Belgium', 'France', 'Italy', 'Spain', 'Germany', 'Netherlands', 'Switzerland', 'Luxembourg');
-            foreach ($countries as $country) {
-                echo '<option value="' . $country . '">' . $country . '</option>';
-            }
+$countries = array(
+    "Belgium" => "Be",
+    "France" => "Fr",
+    "Germany" => "De",
+    "Netherlands" => "Nl",
+    "Ukraine" => "Ua",
+    "Spain" => "Es",
+    "Italy" => "It",
+    "Portugal" => "Pt",
+    "United Kingdom" => "Uk",
+    "United States" => "Us"
+);
+
+foreach ($countries as $country_name => $iso_code) {
+    echo '<option value="' . $iso_code . '">' . $country_name . '</option>';
+}
             ?>
         </select>
         <input type="submit" value="Submit">
