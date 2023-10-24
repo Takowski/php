@@ -150,7 +150,15 @@ function decapitalize($string)
 }
 echo decapitalize($string);
 echo "<br>";
-echo "<p>8.Exercises-who is bigger</p>";
+echo "<p>8.Exercises calculate_cone_volume</p>";
+
+function calculate_cone_volume($ray, $height)
+{
+    $volume = $ray * $ray * pi() * $height * (1 / 3);
+    return $volume;
+}
+echo calculate_cone_volume(5, 2);
+echo "<br>";
 
 ?>
 </body>
