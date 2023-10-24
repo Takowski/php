@@ -13,7 +13,7 @@
 
 <body>
     <?php
-    echo "<p>10.4. Word shuffle</p>";
+    echo "<p>8. Word shuffle</p>";
     $text = "According to a researcher (sic) at Cambridge University,
      it doesn't matter in what order the letters in a word are, 
      the only important thing is that the first and last letter be at the right place. The rest can be a
@@ -43,6 +43,54 @@
           $word = $first_letter . $middle_letters . $last_letter;
           return $word;
       }
+echo "<p>8.Exercises-capitalize</p>";
+$name = "STEPHANE";
+
+function capitalize($name)
+{
+    $name = ucfirst(strtolower($name));
+    return $name;
+}
+echo capitalize($name);
+echo "<br>";
+echo "<p>8.Exercises-date</p>";
+function datehms()
+{
+    $date = date("d-m-y-H-i-s");
+    return $date;
+}
+echo datehms();
+echo "<br>";
+
+echo "<p>8.Exercises-sum</p>";
+
+$number1 = 10;
+$number2 = 20;
+function sum($number1, $number2)
+{
+    if (!is_numeric($number1) || !is_numeric($number2)) {
+        return "Error: argument is the not a number.";
+    }
+    $sum = $number1 + $number2;
+    return $sum;
+}
+echo sum($number1, $number2);
+echo "<br>";
+echo "<p>8.Exercises-acronyme</p>";
+$phrase = "In code we trust!";
+function acronym($phrase)
+{
+    $words = explode(" ", $phrase);
+    $acronym = "";
+    foreach ($words as $word) {
+        $acronym .= strtoupper($word[0]);
+    }
+    return $acronym;
+}
+echo acronym($phrase);
+echo "<br>";
+echo "<p>8.Exercises-Replace</p>";
+
     ?>
 </body>
 
